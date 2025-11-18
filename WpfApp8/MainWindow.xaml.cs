@@ -45,13 +45,10 @@ namespace WpfApp8
             spCarId.ItemsSource = list;
             mySp.Visibility = Visibility.Collapsed;
             DetailsName.Visibility = Visibility.Collapsed;
-
-
         }
 
         private void ShowDetails(object sender, SelectionChangedEventArgs e)
         {
-            //MessageBox.Show((spCarId.SelectedItem as Car).ToString());
             mySp.Visibility = Visibility.Visible;
             DetailsName.Visibility = Visibility.Visible;
             FontSize = 18;
@@ -61,8 +58,6 @@ namespace WpfApp8
             price.Text = (spCarId.SelectedItem as Car).Price.ToString();
             color.Text = (spCarId.SelectedItem as Car).Color;
             manufactoredDate.Text = (spCarId.SelectedItem as Car).ManufactoredDate.ToString();
-            //mySp.Visibility = Visibility.Visible;
-
         }
     }
 }
